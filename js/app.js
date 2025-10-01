@@ -1,5 +1,6 @@
 // Xử lý đăng nhập
 const PASSWORD = 'VIP2025';
+const SEARCH_PASSWORD = 'PM27.23';
 const loginSection = document.getElementById('login-section');
 const quizSection = document.getElementById('quiz-section');
 const loginBtn = document.getElementById('login-btn');
@@ -7,7 +8,8 @@ const passwordInput = document.getElementById('password-input');
 const loginError = document.getElementById('login-error');
 
 loginBtn.onclick = function() {
-    if (passwordInput.value === PASSWORD) {
+    if (passwordInput.value === PASSWORD || passwordInput.value === SEARCH_PASSWORD) {
+        canUseSearch = (passwordInput.value === SEARCH_PASSWORD);
         loginSection.style.display = 'none';
         quizSection.style.display = 'block';
         showSubjectSelection();
@@ -27,6 +29,7 @@ function shuffle(array) {
 let quizQuestions = [];
 let shuffled = false;
 let selectedSubjectKey = null;
+let canUseSearch = false;
 
 function showSubjectSelection() {
     const listHtml = (window.subjects || []).map(s => `
@@ -59,11 +62,23 @@ function showReadyScreen() {
         shuffledAnswer: q.correctAnswer
     }));
     shuffled = false;
+    const searchHtml = canUseSearch ? `
+            <div class="search-box" style="margin:16px 0;padding:12px;border:1px solid #ddd;border-radius:8px;">
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <input id="search-input" type="text" placeholder="Tìm câu hỏi... gõ vài từ khóa" style="flex:1;padding:10px;">
+                    <button id="clear-search-btn">Xóa</button>
+                </div>
+                <div id="search-info" style="font-size:12px;color:#666;margin-top:6px;">Gợi ý: Không phân biệt dấu, tìm theo nội dung câu hỏi hoặc gõ a/b/c/d để lọc theo đáp án đúng.</div>
+                <div id="search-results" style="margin-top:10px;max-height:280px;overflow:auto;"></div>
+            </div>
+        ` : '';
+
     quizSection.innerHTML = `
         <div class="quiz-container" style="max-width:600px;margin:auto;">
             <h2>Chuẩn bị làm bài</h2>
             <p>Môn: ${(window.subjects || []).find(s => s.key === selectedSubjectKey)?.name || ''}</p>
             <p>Bạn có thể đảo cả thứ tự câu hỏi và đáp án trước khi bắt đầu.</p>
+            ${searchHtml}
             <div style="display:flex;gap:10px;justify-content:center;margin:20px 0;">
                 <button id="shuffle-all-btn">Đảo câu hỏi & đáp án</button>
                 <button id="start-quiz-btn" ${quizQuestions.length === 0 ? 'disabled' : ''}>Bắt đầu</button>
@@ -88,10 +103,86 @@ function showReadyScreen() {
             renderQuiz(quizQuestions);
         };
     }
+
+    // Search feature (only if allowed)
+    if (canUseSearch) {
+    const searchInput = document.getElementById('search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const searchResults = document.getElementById('search-results');
+
+    function normalizeText(text) {
+        return (text || '')
+            .toString()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase();
+    }
+
+function renderSearchResults(matches) {
+        if (!matches.length) {
+            searchResults.innerHTML = '<div style="color:#888;">Không có kết quả.</div>';
+            return;
+        }
+        const html = matches.map(({ q, index }) => {
+            const correctIdx = q.shuffledAnswer;
+            const correctText = q.shuffledOptions[correctIdx];
+            return `
+                <div class="search-item" style="padding:10px;border:1px solid #eee;border-radius:6px;margin-bottom:8px;">
+                    <div style="font-weight:600;margin-bottom:6px;">Câu ${index + 1}: ${q.question}</div>
+                    ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Hình" style="max-width:100%;margin:6px 0;"></div>` : ''}
+                    <div style="font-size:14px;margin-bottom:6px;">Đáp án đúng: <span style="color:#0a7a0a;font-weight:600;">${correctText}</span></div>
+                    <button class=\"goto-question\" data-index=\"${index}\" style=\"font-size:13px;\">Đi tới câu này</button>
+                </div>
+            `;
+        }).join('');
+    searchResults.innerHTML = html;
+    searchResults.querySelectorAll('.goto-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const idx = parseInt(btn.getAttribute('data-index')) || 0;
+            renderQuiz(quizQuestions, false, idx);
+        });
+    });
+    }
+
+function doSearch() {
+    const raw = searchInput.value || '';
+    const query = normalizeText(raw).trim();
+        if (!query) {
+            searchResults.innerHTML = '';
+            return;
+        }
+    let answerLetterIdx = null;
+    const letterMatch = query.match(/^([abcd])(\.|\)|\s|$)/i) || (query.length === 1 && query.match(/^[abcd]$/i));
+    if (letterMatch) {
+        const ch = (letterMatch[1] || query).toLowerCase();
+        const map = { a: 0, b: 1, c: 2, d: 3 };
+        answerLetterIdx = map[ch];
+    }
+    const results = quizQuestions
+        .map((q, idx) => ({ q, idx }))
+        .filter(({ q }) => {
+            const qText = normalizeText(q.question);
+            const optionTexts = (q.shuffledOptions || q.options || []).map(normalizeText);
+            const inQuestion = qText.includes(query);
+            const inOptions = optionTexts.some(t => t.includes(query));
+            const byLetter = answerLetterIdx !== null && q.shuffledAnswer === answerLetterIdx;
+            return inQuestion || inOptions || byLetter;
+        })
+        .map(({ q, idx }) => ({ q, index: idx }));
+        renderSearchResults(results);
+    }
+
+    searchInput.addEventListener('input', doSearch);
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+        searchInput.focus();
+    });
+    }
 }
 
-function renderQuiz(quizQuestions, onlyWrong = false) {
-    let current = 0;
+function renderQuiz(quizQuestions, onlyWrong = false, startIndex = 0) {
+    let current = Math.max(0, Math.min(startIndex || 0, quizQuestions.length - 1));
     let userAnswers = Array(quizQuestions.length).fill(null);
     let locked = Array(quizQuestions.length).fill(false);
     quizSection.innerHTML = `
