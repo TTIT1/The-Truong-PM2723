@@ -1326,8 +1326,1116 @@ window.questionBank = {
                 'd. Quy tắc số 4.'
             ],
             correctAnswer: 2 // đáp án c
-        }
+        },
+        {
+            question: 'Câu 127: Cho lược đồ ER trên sau khi áp dụng quy tắc chuyển đổi mô hình ER sang mô hình hướng đối tượng ta sẽ được kết quả : .',
+            options: [
+                'a. Tại lớp Giáo viên sẽ có thêm thuộc tính Giang1: set(Gvien_Khoa).',
+                'b. Tại lớp Giáo viên sẽ có thêm thuộc tính Giang1: set(Gvien_Khoa) và tại lớp Khoa có thêm thuộc tính Giang2: Set(Gvien_Khoa).',
+                'c. Tại lớp Khoa có thêm thuộc tính Giang2: set(Gvien_Khoa).',
+                'd. Tại lớp Giáo viên sẽ có thêm thuộc tính Giang1: set(Gvien_Khoa) và tại lớp Khoa có thêm thuộc tính Giang2: Set(Gvien_Khoa). Và lớp Gvien_Khoa sẽ có thuộc tính là( ID_gvien_khoa: AllID, Giang1: Giaovien, Giang2: Khoa. tongsotiet: integer).',
+                'e. Không có phương án đúng.'
+            ],
+            correctAnswer: 3, // đáp án d
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 128: Cho lược đồ ER trên sau khi áp dụng quy tắc số mấy để chuyển mối quan hệ Giảng sang mô hình hướng đối tượng : .',
+            options: [
+                'a. Quy tắc số 1.',
+                'b. Quy tắc số 2.',
+                'c. Quy tắc số 3.',
+                'd. Quy tắc số 4.'
+            ],
+            correctAnswer: 3, // đáp án d
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 129: Cho lược đồ ER trên, tên các thực thể có trong lược đồ là : .',
+            options: [
+                'a. Giaovien, Giang, Khoa.',
+                'b. Giaovien, Khoa.',
+                'c. Giaovien, Khoa. Tongsotiet, Giang.',
+                'd. Không có phương án nào đúng.'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 130: Cho lược đồ ER trên, Tongsotiet được gọi là : .',
+            options: [
+                'a. Thuộc tính của liên kết Giang.',
+                'b. Thuộc tính của kiểu thực thể Khoa và Giáo viên.',
+                'c. Thuộc tính không thể sử dụng.',
+                'd. Không có phương án nào đúng.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 131: Cho lược đồ ER trên, sau khi chuyển đổi từ mô hình ER sang mô hình quan hệ ta sẽ được những quan hệ nào : .',
+            options: [
+                'a. Quan hệ: Giáo viên, Khoa. Gvien_Khoa (sinh ra do liên kết Giang).',
+                'b. Quan hệ: Giáo viên, Khoa.',
+                'c. Không thể chuyển đổi mô hình sang mô hình quan hệ.',
+                'd. Không có phương án nào đúng.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 132: Cho lược đồ ER trên, để chuyển đổi liên kết Giảng sang mô hình quan hệ ta phải thực hiện bước chuyển đổi thứ : .',
+            options: [
+                'a. 3.',
+                'b. 4.',
+                'c. 5.',
+                'd. 6.'
+            ],
+            correctAnswer: 2, // đáp án c
+            image: 'images/hinh6.png'
+        },
+        {
+            question: 'Câu 133: Cho lược đồ ER trên, để chuyển đổi liên kết Thuộc sang mô hình quan hệ ta phải thực hiện bước chuyển đổi thứ : .',
+            options: [
+                'a. 3.',
+                'b. 4.',
+                'c. 5.',
+                'd. 6.'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh7.png'
+        },
+        {
+            question: 'Câu 134: Cho lược đồ ER trên, chuyển đổi lược đồ sang mô hình quan hệ ta được các quan hệ : .',
+            options: [
+                'a. Giáo viên, Giáo viên_thuộc_Khoa. Khoa.',
+                'b. Khoa. Giáo viên.',
+                'c. Khoa.',
+                'd. Giáo viên.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh7.png'
+        },
+        {
+            question: 'Câu 135: Cho lược đồ ER trên, chuyển đổi lược đồ sang mô hình quan hệ ta được các thuộc tính của quan hệ như sau : .',
+            options: [
+                'a. Giáo viên( id_gv, hodem, ten, tuoi, id_k); Khoa(id_k, tenkhoa. sodienthoai).',
+                'b. Giáo viên(id_gv, hoten, tuoi); Khoa(id_k, tenkhoa. sodienthoai).',
+                'c. Giáo viên(id_gv, hoten, tuoi); Khoa(id_k, tenkhoa. sodienthoai, id_gv).',
+                'd. Không có phương án đúng.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh7.png'
+        },
+        {
+            question: 'Câu 136: Cho lược đồ ER trên, chuyển đổi lược đồ sang mô hình quan hệ ta được các thuộc tính của quan hệ như sau : .',
+            options: [
+                'a. Truongkhoa(id_tk, hodem, ten, tuoi); Khoa(id_k, tenkhoa. sodienthoai, id_tk).',
+                'b. Truongkhoa(id_tk, hoten, tuoi, id_khoa); Khoa(id_k, tenkhoa. sodienthoai, id_tk).',
+                'c. Truongkhoa(id_tk, hodem, ten, tuoi); Quanly(id_tk, id_khoa); Khoa(id_k, tenkhoa. sodienthoai, id_tk).',
+                'd. Truongkhoa(id_tk, hodem, ten, tuoi, id_khoa), Khoa(id_k, tenkhoa. sodienthoai).'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh8.png'
+        },
+        {
+            question: 'Câu 137: Cho lược đồ ER trên, chuyển đổi lược đồ sang mô hình quan hệ ta áp dụng bước chuyển đổi thứ : .',
+            options: [
+                'a. 3.',
+                'b. 4.',
+                'c. 5.',
+                'd. 7.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh8.png'
+        },
+        {
+            question: 'Câu 138: Hạt nhân của mô hình hướng đối tượng là : .',
+            options: [
+                'a. Lớp.',
+                'b. Quan hệ.',
+                'c. Thực thệ.',
+                'd. Liên kết.'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 139: Trong mô hình hướng đối tượng, sự liên kết giữa các lớp đối tượng thực hiện thông qua: .',
+            options: [
+                'a. Liên kết.',
+                'b. Kết nhập.',
+                'c. Kế thừa và sự phụ thuộc.',
+                'd. Tất cả các phương án đều đúng.'
+            ],
+            correctAnswer: 3 // đáp án d
+        },
+        {
+            question: 'Câu 140: Trong mô hình hướng đối tượng, mỗi quan hệ giữa các lớp được thể hiện như: .',
+            options: [
+                'a. Kế thừa.',
+                'b. Sự trừu tượng.',
+                'c. Phương thức.',
+                'd. Thuộc tính của lớp, gọi là thuộc tính quan hệ.'
+            ],
+            correctAnswer: 3 // đáp án d
+        },
+        {
+            question: 'Câu 141: Trong mô hình hướng đối tượng, lớp A có thuộc tính mối quan hệ R với lớp B thì thuộc tính mối quan hệ R có: .',
+            options: [
+                'a. Kiểu dữ liệu là lớp B.',
+                'b. Kiểu dữ liệu cha đợc xác định.',
+                'c. Kiểu dữ liệu quan hệ.',
+                'd. Kiểu dữ liệu số nguyên.'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 142: Trong mô hình hướng đối tượng, lớp A có thuộc tính mối quan hệ R với lớp B , nếu mỗi đối tượng thuộc lớp A có quan hệ với nhiều đối tượng thuộc lớp B thì R được xem như thuộc tính: .',
+            options: [
+                'a. Đa trị.',
+                'b. Đơn trị.',
+                'c. Phức hợp.',
+                'd. Phát sinh.'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 143: Trong mô hình hướng đối tượng, lớp A có thuộc tính mối quan hệ R với lớp B , và thuộc tính R là thuộc tính đa trị thì trong lớp A ta sẽ khai báo: .',
+            options: [
+                'a. R: lớp B;',
+                'b. R: set(lớp B);',
+                'c. R: set(lớp A);',
+                'd. R: lớp A;'
+            ],
+            correctAnswer: 1 // đáp án b
+        },
+        {
+            question: 'Câu 144: Trong mô hình hướng đối tượng, để khai báo thuộc tính phức ta sử dụng từ khóa: .',
+            options: [
+                'a. Set;',
+                'b. List;',
+                'c. Bag;',
+                'd. Tuple;'
+            ],
+            correctAnswer: 3 // đáp án d
+        },
+        {
+            question: 'Câu 145: Trong mô hình hướng đối tượng, để khai báo thuộc tính bằng cấp ta khai báo như sau: .',
+            options: [
+                'a. Bằng cấp: Tuple;',
+                'b. Bằng cấp: Set;',
+                'c. Bằng cấp: List;',
+                'd. Bằng cấp: Bag;'
+            ],
+            correctAnswer: 1 // đáp án b
+        },
+        {
+            question: 'Câu 146: Trong mô hình hướng đối tượng, gọi C1 là siêu lớp (superclass) của lớp C2 có nghĩa là: .',
+            options: [
+                'a. C1 là cha của lớp C2;',
+                'b. C1 là con của lớp C2;',
+                'c. C1 là anh em của lớp C2;',
+                'd. Tất cả đều sai;'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 147: Trong lược đồ CSDL hướng đối tượng, để mô tả quan hệ kế thừa (sự phân cấp lớp) ta sử dụng: .',
+            options: [
+                'a. Cung nét dày dạng mũi tên;',
+                'b. Cung nét mỏng dạng mũi tên;',
+                'c. Cung nét dày;',
+                'd. Cung nét mỏng;'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh9.png'
+        },
+        {
+            question: 'Câu 148: Trong lược đồ CSDL hướng đối tượng, để mô tả mỗi quan hệ giữa các lớp bằng: .',
+            options: [
+                'a. Cung nét dày dạng mũi tên;',
+                'b. Cung nét mỏng dạng mũi tên;',
+                'c. Cung nét dày;',
+                'd. Cung nét mỏng;'
+            ],
+            correctAnswer: 1 // đáp án b
+        },
+        {
+            question: 'Câu 149: Trong lược đồ CSDL hướng đối tượng, kiểu phạm vi được bảo vệ đánh dấu bằng dấu: .',
+            options: [
+                'a. dấu +.',
+                'b. dấu #.',
+                'c. dấu -.',
+                'd. dấu ~.'
+            ],
+            correctAnswer: 1 // đáp án b
+        },
+        {
+            question: 'Câu 150: Hãy cho biết, hình vẽ trên mô phỏng cho: .',
+            options: [
+                'a. Kế thừa bội.',
+                'b. Kế thừa đơn.',
+                'c. Sai vì sử dụng cung mũi tên.',
+                'd. Tất cả các phương án đều sai.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh10.png'
+        },
+        {
+            question: 'Câu 151: Mối quan hệ kết tập là một kiểu kết hợp đặc biệt được sử dụng để: .',
+            options: [
+                'a. Mô hình hóa mối quan hệ tổng thể – các thành phần của nó.',
+                'b. Mô hình hóa mối quan hệ phân biệt độc lập giữa hai lớp đối tượng.',
+                'c. Mô hình hóa mối quan hệ cá thể – thể hiện của hai lớp cha – con.',
+                'd. Tất cả các phương án đều sai.'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 152: Kết tập là một kiểu kết hợp đặc biệt, gồm có: .',
+            options: [
+                'a. Kết tập cơ sở, kết tập hợp thành.',
+                'b. Kết tập cơ sở, kết tập hợp thành, kết tập phản xạ.',
+                'c. Kết tập phản xạ, kết tập hợp thành.',
+                'd. Kết tập phản xạ, kết tập hợp thành, kết tập bộ phận.'
+            ],
+            correctAnswer: 0 // đáp án a
+        },
+        {
+            question: 'Câu 153: Cho lược đồ ER như trên, sau khi thực hiện chuyển đổi sang mô hình hướng đối tượng bằng quy tắc số 4 ta sẽ được lớp Người gồm các thuộc tính: .',
+            options: [
+                'a. id: allID, Hoten: String, Tuoi: Integer, Con: Set(Nguoi), Cha. Me: Nguoi;',
+                'b. id: allID, Hoten: String, Tuoi: Integer, Cha. Me: Nguoi.',
+                'c. id: allID, Hoten: String, Tuoi: Integer, Con: Set(Nguoi).',
+                'd. id: allID, Hoten: String, Tuoi: Integer,'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh11.png'
+        },
+        {
+            question: 'Câu 154: Cho lược đồ ER như trên, sau khi thực hiện chuyển đổi sang mô hình quan hệ ta sẽ được quan hệ Người: .',
+            options: [
+                'a. Nguoi(id, hoten, tuoi, id_cha, id_me).',
+                'b. Nguoi(id, hoten, tuoi, id_cha, id_me, id_con).',
+                'c. Nguoi(id, hoten, tuoi, id_cha).',
+                'd. Nguoi(id, hoten, tuoi).'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh11.png'
+        },
+        {
+            question: 'Câu 155: Cho lược đồ ER như trên, sau khi thực hiện chuyển đổi sang mô hình hướng đối tượng ta sẽ được các lớp: .',
+            options: [
+                'a. Giáo viên, Lớp, Môn học, Lịch dạy;',
+                'b. Giáo viên, Lớp, Môn học.',
+                'c. Giáo viên, Lịch dạy, Môn học.',
+                'd. Giáo viên, Lịch dạy, Lớp.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 156: Cho lược đồ ER như trên, sau khi thực hiện chuyển đổi sang mô hình hướng đối tượng ta sẽ áp dụng quy tắc chuyển đổi thứ: .',
+            options: [
+                'a. 5.',
+                'b. 4.',
+                'c. 3.',
+                'd. 2.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 157: Cho lược đồ ER như trên, sau khi thực hiện chuyển đổi sang mô hình hướng đối tượng ta sẽ áp dụng quy tắc chuyển đổi thứ 5, quy tắc này làm phát sinh thêm một lớp mới từ quan hệ Dạy gọi là Lịch Dạy, Lịch Dạy sẽ gồm những thuộc tính gì? .',
+            options: [
+                'a. Thời gian: String, Giang: Giaovien, Gomco: Monhoc, Botri: Lop.',
+                'b. Thời gian: String, Gomco: Monhoc, Botri: Lop.',
+                'c. Giang: Giaovien, Gomco: Monhoc, Botri: Lop.',
+                'd. Thời gian: String, Giang: Giaovien, Gomco: Monhoc.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 158: Cho lược đồ ER như trên, quan hệ Dạy được gọi là: .',
+            options: [
+                'a. Quan hệ đa nguyên.',
+                'b. Quan hệ nhị nguyên.',
+                'c. Quan hệ phức hợp.',
+                'd. Quan hệ đa trị.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 159: Cho lược đồ ER như trên, thực hiện chuyển đổi sang mô hình quan hệ ta sẽ được số thực thể là: .',
+            options: [
+                'a. 4.',
+                'b. 5.',
+                'c. 3.',
+                'd. 2.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 160: Cho lược đồ ER như trên, thực hiện chuyển đổi sang mô hình quan hệ sẽ phát sinh thêm một quan hệ mới là quan hệ Lịch dạy, quan hệ này gồm những thuộc tính: .',
+            options: [
+                'a. id_gv, id_lop, id_monhoc.',
+                'b. id_gv, id_lop, id_monhoc, thoigian.',
+                'c. id_lop, thoigian.',
+                'd. id_lop, id_gv, id_monhoc, thoigian, hoten, sotiet.'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh12.png'
+        },
+        {
+            question: 'Câu 161: Chuyển mỗi thực thể thành một quan hệ là việc?.',
+            options: [
+                'a. Chuyển tên thực thể thành tên quan hệ.',
+                'b. Chuyển các thuộc tính của thực thể thành thuộc tính của quan hệ.',
+                'c. Chuyển thuộc tính định danh của thực thể thành thuộc tính khoá của quan hệ.',
+                'd. Tất cả các ý trên.'
+            ],
+            correctAnswer: 3, // đáp án d
+            image: 'images/hinh13.png'
+        },
+        {
+            question: 'Câu 162: Với phiếu giao hàng trên ta tìm được những thực thể nào?.',
+            options: [
+                'a. DM_KHACH,DM_HANG.',
+                'b. MD_KHACH,DM_HANG, PHIEU_GIAO_HANG.',
+                'c. Không có đáp án đúng.',
+                'd. PHIEU_GIAO_HANG, DM_KHACH.'
+            ],
+            correctAnswer: 0, // đáp án a
+            
+        },
+        {
+            question: 'Câu 163: Cho lược đồ ER như trên, các quan hệ sinh ra tại bước chuyển đối thứ nhất từ mô hình ER sang mô hình quan hệ là:',
+            options: [
+                'a. Bác sĩ, Chuyên khoa, Bệnh nhân',
+                'b. Bác sĩ, Chuyên khoa, Bệnh nhân, Liệu pháp điều trị',
+                'c. Bệnh nhân, Bác Sĩ, Liệu pháp điều trị',
+                'd. Tất cả đều đúng'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 164: Cho lược đồ ER như trên, các quan hệ sinh ra sau khi thực hiện bảy bước chuyển đổi từ mô hình ER sang mô hình quan hệ là:',
+            options: [
+                'a. Bác sĩ, Chuyên khoa, Bệnh nhân',
+                'b. Bác sĩ, Chuyên khoa, Bệnh nhân, Bảng theo dõi điều trị',
+                'c. Bệnh nhân, Bác Sĩ, Liệu pháp điều trị',
+                'd. Tất cả đều đúng'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 165: Cho lược đồ ER như trên, các lớp đối tượng sinh ra sau khi thực hiện chuyển đổi từ mô hình ER sang mô hình hướng đối tượng là:',
+            options: [
+                'a. Lớp đối tượng Bác sĩ, Lớp đối tượng Chuyên khoa, Lớp đối tượng Bệnh nhân',
+                'b. Lớp đối tượng Bác sĩ, Lớp đối tượng Chuyên khoa, Lớp đối tượng Bệnh nhân, Lớp đối tượng Bảng theo dõi điều trị',
+                'c. Lớp Bệnh nhân, Lớp Bác Sĩ, Lớp Liệu pháp điều trị',
+                'd. Tất cả đều sai'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 166: Cho lược đồ ER như trên, các lớp đối tượng sinh ra sau khi thực hiện chuyển đổi từ mô hình ER sang mô hình hướng đối tượng',
+            options: [
+                'a. Lớp đối tượng Bác sĩ, Lớp đối tượng Chuyên khoa, Lớp đối tượng Bệnh nhân',
+                'b. Lớp đối tượng Bác sĩ, Lớp đối tượng Chuyên khoa, Lớp đối tượng Bệnh nhân, Lớp đối tượng Bảng theo dõi điều trị',
+                'c. Lớp Bệnh nhân, Lớp Bác Sĩ, Lớp Liệu pháp điều trị',
+                'd. Tất cả đều sai'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 167: Cho lược đồ ER trên, lược đồ quan hệ kết quả sau khi thực hiện chuyển đổi từ ER sang là:',
+            options: [
+                'a. Bác Sĩ(Mã bs, Họ đêm, Tên, Số đt, Địa chỉ, mã ck), Bệnh nhân( Mã bn, Họ đêm, tên, địa chỉ, Bác sĩ theo dõi), Chuyên khoa(mã ck, Tên ck), Bảng điều trị (mã bn, mã bs, ngày đt, liệu pháp).',
+                'b. Bác Sĩ(Mã bs, Họ đêm, Tên, Số đt, Địa chỉ), Bệnh nhân( Mã bn, Họ đêm, tên, địa chỉ,), Chuyênkhoa(mã ck, Tên ck), Bảng điều trị (mã bn, mã bs, ngày đt, liệu pháp).',
+                'c. Bác Sĩ(Mã bs, Họ đêm, Tên, Số đt, Địa chỉ, mã ck), Bệnh nhân( Mã bn, Họ đêm, tên, địa chỉ), Chuyênkhoa(mã ck, Tên ck), Bảng điều trị (mã bn, mã bs, ngày đt, liệu pháp).',
+                'd. Không có phương án đúng'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 168: Cho lược đồ ER trên, Kết quả sau khi thực hiện chuyển đổi từ ER sang quan hệ là : Bác Sĩ(Mã bs, Họ đêm, Tên, Số đt, Địa chỉ, mã ck), Bệnh nhân( Mã bn, Họ đêm, tên, địa chỉ, Bác sĩ theo dõi), Chuyên khoa(mã ck, Tên ck), Bảng điều trị (mã bn, mã bs, ngày đt, liệu pháp). Quan hệ Bảng điều trị sẽ được phát sinh tại bước chuyển đổi thứ:',
+            options: [
+                'a. 5.',
+                'b. 6.',
+                'c. 7.',
+                'd. 8.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 169: Cho lược đồ ER trên, thuộc tính mã ck đươc thêm vào quan hệ Bác Sĩ tại bước chuyển đổi thứ:',
+            options: [
+                'a. 4.',
+                'b. 5.',
+                'c. 6.',
+                'd. 7.'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 169: Cho lược đồ ER trên, thuộc tính Bác sĩ theo dõi được thêm vào vào quan hệ Bệnh nhân tại bước chuyển đổi thứ:',
+            options: [
+                'a. 4',
+                'b. 5',
+                'c. 6',
+                'd. 8'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh14.png'
+        },
+        {
+            question: 'Câu 170: Ngôn ngữ DDL là:',
+            options: [
+                'a. Ngôn ngữ định nghĩa dữ liệu',
+                'b. Ngôn ngữ truy vấn dữ liệu',
+                'c. Ngôn ngữ định nghĩa cấu trúc',
+                'd. Tất cả các phương án đều đúng'
+            ],
+            correctAnswer: 0, // đáp án a
+          
+        },
+        {
+            question: 'Câu 171: Một lớp mới có thể được định nghĩa bằng lệnh:',
+            options: [
+                'a. (make-class ClassName [:superclasses ListOfSuperClasses] [:attributes ListOfAttributes] [:methods ListOfMethodSpecs])',
+                'b. Ngôn ngữ truy vấn dữ liệu',
+                'c. Ngôn ngữ định nghĩa cấu trúc',
+                'd. Tất cả các phương án đều sai'
+            ],
+            correctAnswer: 0, // đáp án a
+          
+        },
+        {
+            question: 'Câu 172: Ngôn ngữ DML là:',
+            options: [
+                'a. Ngôn ngữ thao tác dữ liệu',
+                'b. Ngôn ngữ truy vấn dữ liệu',
+                'c. Ngôn ngữ định nghĩa cấu trúc',
+                'd. Ngôn ngữ định nghĩa dữ liệu'
+            ],
+            correctAnswer: 0, // đáp án a
+           
+        },
+        {
+            question: 'Câu 173: Ngôn ngữ DML là:',
+            options: [
+                'a. Ngôn ngữ cho phép khởi tạo, cập nhật, xóa các thể hiện riêng lẻ của lớp',
+                'b. Ngôn ngữ cho phép mô tả lược đồ đối với cơ sở dữ liệu hướng đối tượng',
+                'c. Cho phép đặc tả các giao dịch, điều khiển tính toàn vẹn ngữ nghĩa, sự cấp phép và quản lý truy cập các phương thức',
+                'd. Ngôn ngữ định nghĩa cấu trúc'
+            ],
+            correctAnswer: 0, // đáp án a
+     
+        },
+        {
+            question: 'Câu 174: Ngôn ngữ DDL là:',
+            options: [
+                'a. Ngôn ngữ cho phép khởi tạo, cập nhật, xóa các thể hiện riêng lẻ của lớp',
+                'b. Ngôn ngữ cho phép mô tả lược đồ đối với cơ sở dữ liệu hướng đối tượng',
+                'c. Cho phép đặc tả các giao dịch, điều khiển tính toàn vẹn ngữ nghĩa, sự cấp phép và quản lý truy cập các phương thức',
+                'd. Ngôn ngữ định nghĩa cấu trúc'
+            ],
+            correctAnswer: 1, // đáp án b
+            
+        },
+        {
+            question: 'Câu 175: Ngôn ngữ DDL là:',
+            options: [
+                'a. Ngôn ngữ cho phép khởi tạo, cập nhật, xóa các thể hiện riêng lẻ của lớp',
+                'b. Ngôn ngữ cho phép mô tả lược đồ đối với cơ sở dữ liệu hướng đối tượng',
+                'c. Cho phép đặc tả các giao dịch, điều khiển tính toàn vẹn ngữ nghĩa, sự cấp phép và quản lý truy cập các phương thức',
+                'd. Ngôn ngữ định nghĩa cấu trúc'
+            ],
+            correctAnswer: 1, // đáp án b
+           
+        },
+        {
+            question: 'Câu 176: Ngôn ngữ DCL là:',
+            options: [
+                'a. Ngôn ngữ cho phép khởi tạo, cập nhật, xóa các thể hiện riêng lẻ của lớp',
+                'b. Ngôn ngữ cho phép mô tả lược đồ đối với cơ sở dữ liệu hướng đối tượng',
+                'c. Cho phép đặc tả các giao dịch, điều khiển tính toàn vẹn ngữ nghĩa, sự cấp phép và quản lý truy cập các phương thức',
+                'd. Ngôn ngữ định nghĩa cấu trúc'
+            ],
+            correctAnswer: 2, // đáp án c
+            image: 'images/hinh15.png'
+        },
+        {
+            question: 'Câu 177: Ngôn ngữ DCL là:',
+            options: [
+                'a. Ngôn ngữ thao tác dữ liệu',
+                'b. Ngôn ngữ truy vấn dữ liệu',
+                'c. Ngôn ngữ điều khiển dữ liệu',
+                'd. Ngôn ngữ định nghĩa dữ liệu'
+            ],
+            correctAnswer: 2, // đáp án c
+        },
+        {
+            question: 'Câu 178: Reeloop là:',
+            options: [
+                'a. Ngôn ngữ truy vấn hướng đối tượng',
+                'b. Hệ quản trị cơ sở dữ liệu hướng đối tượng',
+                'c. Chuẩn của ngôn ngữ truy vấn hướng đối tượng',
+                'd. Ngôn ngữ định nghĩa dữ liệu'
+            ],
+            correctAnswer: 0, // đáp án a
+        },
+        {
+            question: 'Câu 179: Hệ thống O2 liên kết với thế giới CSDL bằng các chức năng:',
+            options: [
+                'a. Định danh đối tượng',
+                'b. Kiểu trừu tượng',
+                'c. Sự đóng gói',
+                'd. Tính kế thừa và sự ràng buộc',
+                'e. Tất cả các phương án đều đúng'
+            ],
+            correctAnswer: 4, // đáp án e
+        },
+        {
+            question: 'Câu 180: OQL là ngôn ngữ:',
+            options: [
+                'a. Truy vấn đối tượng',
+                'b. Định nghĩa đối tượng',
+                'c. Cho phép sự đóng gói',
+                'd. Thể hiện tính kế thừa và sự ràng buộc',
+                'e. Tất cả các phương án đều đúng'
+            ],
+            correctAnswer: 4, // đáp án e
+        },
+        {
+            question: 'Câu 181: Đầu vào của một truy vấn OQL là:',
+            options: [
+                'a. Một (hoặc nhiều hơn một) tập hợp các thể hiện của lớp được truy vấn hoặc các lớp trong đồ thị lược đồ của lớp được truy vấn',
+                'b. Tập hợp các lớp trong lược đồ hướng đối tượng',
+                'c. Tập hợp các đối tượng độc lập trong lược đồ hướng đối tượng',
+                'd. Một tập hợp các thể hiện thuộc lớp cơ sở hay một tập hợp các thể hiện thuộc các lớp trong đồ thị truy vấn'
+            ],
+            correctAnswer: 0, // đáp án a
+        },
+        {
+            question: 'Câu 182: Đầu ra của một truy vấn OQL là:',
+            options: [
+                'a. Một (hoặc nhiều hơn một) tập hợp các thể hiện của lớp được truy vấn hoặc các lớp trong đồ thị lược đồ của lớp được truy vấn',
+                'b. Tập hợp các lớp trong lược đồ hướng đối tượng',
+                'c. Tập hợp các đối tượng độc lập trong lược đồ hướng đối tượng',
+                'd. Một tập hợp các thể hiện thuộc lớp cơ sở hay một tập hợp các thể hiện thuộc các lớp trong đồ thị truy vấn'
+            ],
+            correctAnswer: 3, // đáp án d
+        },
+        {
+            question: 'Câu 183: Cho các lớp đối tượng trong lược đồ hướng đối tượng như sau: SELECT s.number FROM s IN Software. Kết quả của câu lệnh truy vấn này là:',
+            options: [
+                'a. Trả về một tập hợp các số nguyên là thể hiện của thuộc tính mã số của các đối tượng phần mềm s',
+                'b. Trả về mã số của đối tượng s',
+                'c. Trả về thuộc tính mã số của lớp phần mềm',
+                'd. Trả về thuộc tính mã số của đối tượng s'
+            ],
+            correctAnswer: 0, // đáp án a
+            image: 'images/hinh16.png'
+        },
+        {
+            question: 'Câu 184: Cho các lớp đối tượng trong lược đồ hướng đối tượng như trên. SELECT p FROM p IN s.team, s IN Software WHERE s.number =111. Kết quả của câu lệnh truy vấn là:',
+            options: [
+                'a. Trả về một tập hợp các số nguyên là thể hiện của thuộc tính mã số của các đối tượng phần mềm s',
+                'b. Trả về tập hợp các đối tượng p (người lập trình) tham gia trong phần mềm có mã số là 111',
+                'c. Trả về tập hợp các đối tượng p có thuộc tính team của đối tượng s',
+                'd. Trả về thuộc tính mã số của đối tượng s'
+            ],
+            correctAnswer: 1, // đáp án b
+            image: 'images/hinh17.png'
+        },
         
+            {
+              question: 'Câu 185: Để truy cập đến các thành phần dữ liệu của một đối tượng trong CSDL hướng đối tượng phải thông qua:',
+              options: [
+                'a. Biểu thức đường dẫn',
+                'b. Tên lớp',
+                'c. Tên đối tượng',
+                'd. Thể hiện thuộc tính của đối tượng'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 186: Nếu x là một đối tượng, a là một thuộc tính của đối tượng x, khi đó biểu thức đường dẫn để truy cập đến giá trị thuộc tính a của đối tượng x là:',
+              options: [
+                'a. x.a',
+                'b. x::a',
+                'c. x->a',
+                'd. Tất cả các phương án đều sai'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 187: Nếu x là một đối tượng, r là một thuộc tính mối quan hệ, khi đó biểu thức đường dẫn x.r là:',
+              options: [
+                'a. Thể hiện kết nối của mối quan hệ khi truy vấn',
+                'b. Thể hiện truy xuất đến thuộc tính r của x',
+                'c. Thể hiện sự truy xuất từ đối tượng thuộc lớp khác đến thuộc tính r',
+                'd. Tất cả các phương án đều sai'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 188: Cho truy vấn sau: SELECT p.name, p.role(p,s); FROM p IN Programmer, s IN p.works_on; WHERE s.number =111. Ý nghĩa của biểu thực p.name là:',
+              options: [
+                'a. Trả về tên của đối tượng p',
+                'b. Trả về mã số của phần mềm',
+                'c. Trả về giá trị của hàm name',
+                'd. Trả về tập hợp các phần mềm s mà nhà lập trình p tham gia'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 189: Cho truy vấn sau: SELECT p.name, p.role(p,s); FROM p IN Programmer, s IN p.works_on; WHERE s.number =111. Ý nghĩa của biểu thực s.number:',
+              options: [
+                'a. Trả về tên của đối tượng p',
+                'b. Trả về mã số của phần mềm s',
+                'c. Trả về giá trị của hàm name',
+                'd. Trả về tập hợp các phần mềm s mà nhà lập trình p tham gia'
+              ],
+              correctAnswer: 1
+            },
+            {
+              question: 'Câu 190: Cho truy vấn sau: SELECT p.name, p.role(p,s); FROM p IN Programmer, s IN p.works_on; WHERE s.number =111. Ý nghĩa của biểu thực p.role(p,s) là:',
+              options: [
+                'a. Trả về tên của đối tượng p',
+                'b. Trả về mã số của phần mềm s',
+                'c. Trả về giá trị của hàm role nói lên vai trò của nhà lập trình p trong phần mềm s',
+                'd. Trả về tập hợp các phần mềm s mà nhà lập trình p tham gia'
+              ],
+              correctAnswer: 2
+            },
+            {
+              question: 'Câu 191: Cho truy vấn sau: SELECT p.name, p.role(p,s); FROM p IN Programmer, s IN p.works_on; WHERE s.number =111. Ý nghĩa của biểu thực p.work_on là:',
+              options: [
+                'a. Trả về tên của đối tượng p',
+                'b. Trả về mã số của phần mềm s',
+                'c. Trả về giá trị của hàm role nói lên vai trò của nhà lập trình p trong phần mềm s',
+                'd. Trả về tập hợp các phần mềm s mà nhà lập trình p tham gia'
+              ],
+              correctAnswer: 3
+            },
+            {
+              question: 'Câu 192: OQL được chia thành:',
+              options: [
+                'a. 2 loại',
+                'b. 3 loại',
+                'c. 4 loại',
+                'd. 5 loại'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 193: OQL được chia thành:',
+              options: [
+                'a. Truy vấn trên một lớp đối tượng và truy vấn nối nhiều lớp trên một cấu trúc phân lớp',
+                'b. Truy vấn trên một lớp đối tượng và truy vấn trên nhiều lớp độc lập',
+                'c. Truy vấn trên các lớp đối tượng và truy vấn trên các thể hiện của lớp đối tượng',
+                'd. Tất cả đều sai'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 194: Cho cú pháp câu lệnh Select như sau: SELECT E(e) FROM e IN E WHERE C(e). Trong cú pháp lệnh trên thì e là:',
+              options: [
+                'a. Thể hiện của lớp',
+                'b. Biểu thức đường dẫn',
+                'c. Hàm của lớp',
+                'd. Tập các lớp'
+              ],
+              correctAnswer: 0
+            },
+            {
+              question: 'Câu 195: Cho cú pháp câu lệnh Select như sau: SELECT E(e) FROM e IN E WHERE C(e). Trong cú pháp lệnh trên thì E là:',
+              options: [
+                'a. Thể hiện của lớp',
+                'b. Biểu thức đường dẫn. Hoặc hàm của lớp',
+                'c. Tất cả đều sai',
+                'd. Tập các lớp'
+              ],
+              correctAnswer: 1
+            },
+            {
+              question: 'Câu 196: Cho cú pháp câu lệnh Select như sau: SELECT E(e) FROM e IN E WHERE C(e). Trong cú pháp trên thì mệnh đề From chỉ ra:',
+              options: [
+                'a. Thể hiện của lớp',
+                'b. Biểu thức đường dẫn. Hoặc hàm của lớp',
+                'c. Tập hợp các đối tượng truy vấn theo biểu thức đường dẫn E',
+                'd. Tập các lớp'
+              ],
+              correctAnswer: 2
+            },
+            {
+              question: 'Câu 197: Cho cú pháp câu lệnh Select như sau: SELECT E(e) FROM e IN E WHERE C(e). Trong cú pháp trên thì mệnh đề Where chỉ ra:',
+              options: [
+                'a. Thể hiện của lớp',
+                'b. Biểu thức đường dẫn. Hoặc hàm của lớp',
+                'c. Tập hợp các đối tượng truy vấn theo biểu thức đường dẫn E',
+                'd. Điều kiện truy vấn'
+              ],
+              correctAnswer: 3
+            },
+            {
+                question: 'Câu 198: (1 đáp án)\nCâu 197: Cho các lớp như trên:\nCâu truy vấn để hiển thị tên nhóm, số điện thoại và tên nhà quản lý của các nhóm lập trình của công ty là:',
+                options: [
+                'a. SELECT g.name, g.phone_no, g.manager.name FROM g In Group;',
+                'b. SELECT g.name, g.phone_no, manager.name FROM g In Group;',
+                'c. SELECT g.name, g.phone_no, g.manager.name FROM g In Programer',
+                'd. Tất cả đều sai'
+                ],
+                correctAnswer: 0, // đáp án a
+                image: 'images/hinh18.png'
+            },
+            {
+                question: 'Câu 199: (1 đáp án)\nCâu 198: Cho các lớp như trên, hãy cho biết câu lệnh truy vấn sau: SELECT g.name, g.phone_no, g.manager.name FROM g In Group; Sai ở đâu:',
+                options: [
+                'a. g.manager.name',
+                'b. g in Group',
+                'c. g.phone_no',
+                'd. Câu lệnh truy vấn đúng không sai'
+                ],
+                correctAnswer: 3, // đáp án d
+                image: 'images/hinh19.png'
+            },
+            {
+                question: 'Câu 200: (1 đáp án)\nCâu 199: Cho các lớp như trên, hãy cho biết câu lệnh truy vấn sau: SELECT p.name, p.group.name, p.phone_no FROM p IN Group WHERE p.floor= 2; Sai ở:',
+                options: [
+                'a. g.manager.name',
+                'b. p IN Group',
+                'c. g.phone_no',
+                'd. Câu lệnh truy vấn đúng không sai'
+                ],
+                correctAnswer: 1, // đáp án b
+                image: 'images/hinh20.png'
+            },
+            {
+                question: "Câu 201: (1 đáp án)\nCâu 200: Cho các lớp như trên: Câu truy vấn để hiển thị tên , số điện thoại và tên nhóm của những nhà lập tình làm việc ở tầng 2 là:",
+                options: [
+                "a. SELECT p.name, p.group.name, p.phone_no FROM p IN Programmer WHERE p.floor= 2;",
+                "b. SELECT p.name, group.name, p.phone_no FROM p IN Programmer WHERE p.floor= 2 ;",
+                "c. SELECT p.name, programmer.group.name, p.phone_no FROM p IN Group WHERE p.floor= 2;",
+                "d. Tất cả đều sai"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 202: (1 đáp án)\nCâu 201: Cho các lớp như trên, hãy cho biết câu lệnh truy vấn sau:\nSELECT p.name, group.name, p.phone_no FROM p IN Programmer WHERE p.floor= 2; Sai ở:",
+                options: [
+                "a. group.name",
+                "b. p IN Group",
+                "c. g.phone_no",
+                "d. Câu lệnh truy vấn đúng không sai"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 203: (1 đáp án)\nCâu 202: Cho các lớp như trên: Câu truy vấn liệt kê tên, số điện thoại của các nhà lập tình có mã số lớn hơn 111 và thuộc nhóm phân tích:",
+                options: [
+                "a. SELECT p.name, p.phone_no FROM p IN Programmer; WHERE (p.group.name = ‘Analysis’) AND (p.number > 111);",
+                "b. SELECT p.name, p.phone_no FROM p IN Programmer; WHERE (p.name = ‘Analysis’) AND (p.number > 111);",
+                "c. SELECT p.name, p.phone_no FROM p IN Programmer; WHERE (p.name = ‘Analysis’) AND (p.group > 111);",
+                "d. Tất cả đều sai"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 204: (1 đáp án)\nCâu 203: Cho các lớp như trên, cho câu lệnh truy vấn: SELECT p.name, p.phone_no FROM p IN Programmer; WHERE (p.group.name = ‘Analysis’) AND (p.number > 111); Câu lệnh sai ở:",
+                options: [
+                "a. Sai tại p.name;",
+                "b. Sai ở p IN Programmer;",
+                "c. Sai ở p.phone_no",
+                "d. Tất cả đều sai"
+                ],
+                correctAnswer: 3
+                },
+                {
+                question: "Câu 205: (1 đáp án)\nCâu 204: Trong truy vấn OQL cho phép truy vấn tối đa:",
+                options: [
+                "a. 1 lớp đối tượng",
+                "b. 2 lớp đối tượng",
+                "c. 3 lớp đối tượng",
+                "d. nhiều lớp đố tượng tùy theo sự phân cấp lớp"
+                ],
+                correctAnswer: 3
+                },
+                {
+                question: "Câu 206: (1 đáp án)\nCâu 205: Cho các lớp đối tượng như trên. Để hiển thị mã số, tên nhóm của các nhà lập trình tham gia trong dự án phần mềm số 101 và vai trò của họ trong dự án đó ta chọn câu lệnh:",
+                options: [
+                "a. SELECT p.number, p.name, p.group.name, p.role(p, s) FROM p IN Programmer, s IN Software WHERE (s.number = 101) AND (s IN p.works_on);",
+                "b. SELECT p.number, p.name, p.group.name, p.role(p, s) FROM p IN Programmer, s IN Software WHERE (p.number = 101) AND (s IN p.works_on);",
+                "c. SELECT p.number, p.name, p.group, p.role(p, s) FROM p IN Programmer, s IN Software WHERE (s.number = 101) AND (s IN p.works_on);",
+                "d. SELECT p.number, p.name, p.group.name, role(p, s) FROM p IN Programmer, s IN Software WHERE (s.number = 101) AND (s IN p.works_on);"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 207: (1 đáp án)\nCâu 206: Cho các lớp đối tượng như trên.Và câu lệnh OQL như sau: SELECT p.number, p.name, p.group, p.role(p, s) FROM p IN Programmer, s IN Software WHERE (s.number = 101) AND (s IN p.works_on); câu lệnh sai ở:",
+                options: [
+                "a. Câu lệnh không sai",
+                "b. Sai tại p.group",
+                "c. Sai tại p In Programmer",
+                "d. Sai tại s In Software"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 208: (1 đáp án)\nCâu 207: Cho các lớp đối tượng như trên.Và câu lệnh OQL như sau: SELECT p.number, p.name, p.group, p.role(p, s) FROM p IN Programmer, s IN Software WHERE (s.number = 101) AND (s IN p.works_on); Câu lệnh này sẽ hiển thị mã số, tên, tên nhóm các nhà lập trình tham gia trong dự án phần mềm số 101 và vai trò của họ trong dự án. Tuy nhiên câu lệnh này bị lỗi tại p.group cần sửa lại là :",
+                options: [
+                "a. Câu lệnh không sai",
+                "b. p.group.name",
+                "c. p In software",
+                "d. s In Programmer"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 209: (1 đáp án)\nCâu 208: Cho các lớp đối tượng như trên.Và câu lệnh OQL như sau: SELECT p.name, p.phone_no, p.group.name FROM p IN Programmer, s IN Software WHERE (p.number = 111) AND NOT(s IN p.works_on); Câu lệnh này sẽ hiển thị tên, số điện thoại, tên nhóm, của các nhà lập trình không làm việc ở dự án phần mềm số 111. Tuy nhiên câu lệnh này bị lỗi tại:",
+                options: [
+                "a. Tất cả các phương án",
+                "b. p.number=111",
+                "c. s In p.work_on",
+                "d. s In Software"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 210: (1 đáp án)\nCâu 209: Cho các lớp đối tượng như trên.Và câu lệnh OQL như sau: SELECT p.name, p.phone_no, p.group.name FROM p IN Programmer, s IN Software WHERE (p.number = 111) AND NOT(s IN p.works_on); Câu lệnh này sẽ hiển thị tên, số điện thoại, tên nhóm, của các nhà lập trình không làm việc ở dự án phần mềm số 111. Tuy nhiên câu lệnh này bị lỗi tại điều kiện Where cần sửa lại là:",
+                options: [
+                "a. Không có phương án đúng",
+                "b. s.number=111",
+                "c. s In s.work_on",
+                "d. s In Group"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 211: (1 đáp án)\nCâu 210: Cho các lớp đối tượng như trên. Để hiển thị tên, số điện thoại, tên nhóm, của các nhà lập trình không làm việc ở dự án phần mềm số 111. Ta chọn phương án nào trong các phương án sau:",
+                options: [
+                "a. SELECT p.name, p.phone_no, p.group.name FROM p IN Programmer, s IN Software WHERE (s.number = 111) AND NOT(s IN p.works_on);",
+                "b. SELECT p.name, p.phone_no, p.group.name FROM p IN Programmer, s IN Software WHERE (p.number = 111) AND NOT(s IN p.works_on);",
+                "c. SELECT p.name, p.phone_no, s.group.name FROM p IN Programmer, s IN Software WHERE (p.number = 111) AND NOT(s IN p.works_on);",
+                "d. SELECT p.name, p.phone_no, p.group.name FROM p IN Programmer, s IN Software WHERE (p.number = 111) AND NOT(s IN s.works_on);"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 212: (1 đáp án)\nCâu 211: Cho các lớp đối tượng như trên. Liệt kê mã số, tên, kinh phí của các dự án phần mềm sau năm 1997 do nhà lập trình có mã số 111 quản lý. Ta chọn phương án nào trong các phương án sau:",
+                options: [
+                "a. SELECT s.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND ( year(s.date) >1997);",
+                "b. SELECT p.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND ( year(s.date) >1997);",
+                "c. SELECT s.number, p.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND ( year(s.date) >1997);",
+                "d. SELECT s.number, s.name, p.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND ( year(s.date) >1997);"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 213: (1 đáp án)\nCâu 212: Cho các lớp đối tượng như trên. Liệt kê mã số, tên, kinh phí của các dự án phần mềm sau năm 1997 do nhà lập trình có mã số 111 quản lý. Ta có câu lệnh OQL sau: SELECT s.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (s.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND (year(s.date) >1997); Tuy nhiên câu lệnh trên bị lỗi tại:",
+                options: [
+                "a. s.name",
+                "b. s.number=111",
+                "c. p IN s.team",
+                "d. role(p,s)= ‘Manage’"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 214: (1 đáp án)\nCâu 213: Cho các lớp đối tượng như trên. Liệt kê mã số, tên, kinh phí của các dự án phần mềm sau năm 1997 do nhà lập trình có mã số 111 quản lý. Ta có câu lệnh OQL sau: SELECT s.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p) = ‘Manage’) AND (year(s.date) >1997); Tuy nhiên câu lệnh trên bị lỗi tại:",
+                options: [
+                "a. s.name",
+                "b. p.number=111",
+                "c. p IN s.team",
+                "d. role(p)= ‘Manage’"
+                ],
+                correctAnswer: 3
+                },
+                {
+                question: "Câu 215: (1 đáp án)\nCâu 214: Cho các lớp đối tượng như trên. Liệt kê mã số, tên, kinh phí của các dự án phần mềm sau năm 1997 do nhà lập trình có mã số 111 quản lý. Ta có câu lệnh OQL sau: SELECT s.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (s IN s.team) AND (role(p,s) = ‘Manage’) AND (year(s.date) >1997); Tuy nhiên câu lệnh trên bị lỗi tại:",
+                options: [
+                "a. s.name",
+                "b. p.number=111",
+                "c. s IN s.team",
+                "d. role(p,s)= ‘Manage’"
+                ],
+                correctAnswer: 2
+                },
+                {
+                question: "Câu 216: (1 đáp án)\nCâu 215: Cho các lớp đối tượng như trên. Liệt kê mã số, tên, kinh phí của các dự án phần mềm sau năm 1997 do nhà lập trình có mã số 111 quản lý. Ta có câu lệnh OQL sau: SELECT s.number, s.name, s.budget FROM s IN Software, p IN Programmer WHERE (p.number = 111) AND (p IN s.team) AND (role(p,s) = ‘Manage’) AND (year(p.date) >1997); Tuy nhiên câu lệnh trên bị lỗi tại:",
+                options: [
+                "a. year(p.date)>1997",
+                "b. p.number=111",
+                "c. p IN s.team",
+                "d. role(p,s)= ‘Manage’"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 217: (1 đáp án)\nCâu 216: Hãy cho biết đặc trưng của OQL:",
+                options: [
+                "a. OQL hỗi trợ kiểu phong phú hơn.",
+                "b. OQL có thể tích hợp với các tính năng của ngôn ngữ lập trình hướng đối tượng như Smalltalk, C++, Java",
+                "c. Truy vấn trên tất cả các thể hiện thuộc lớp chỉ ra trong đồ thị truy vấn",
+                "d. Tất cả các phương án"
+                ],
+                correctAnswer: 3
+                },
+                {
+                question: "Câu 218: (1 đáp án)\nCâu 217: Cho lớp Giao viên như sau: Class GIAOVIEN properties OID: ID; Hoten: String; Tuoi: Integer; Sothich: Set(String); Thuoc: KHOA; Giang: Set(MONHOC); Diachi: Tuple( Sonha: Integer; Duong: String; Thanhpho: String); operations ....... End GIAOVIEN. OID được gọi là thuộc tính:",
+                options: [
+                "a. Định danh.",
+                "b. Khóa",
+                "c. Thuộc tính đa trị",
+                "d. Thuộc tính mỗi quan hệ"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 219: (1 đáp án)\nCâu 218: Cho lớp GIAOVIEN ... Sothich được gọi là thuộc tính:",
+                options: [
+                "a. Định danh.",
+                "b. Khóa",
+                "c. Thuộc tính đa trị",
+                "d. Thuộc tính mỗi quan hệ"
+                ],
+                correctAnswer: 2
+                },
+                {
+                question: "Câu 220: (1 đáp án)\nCâu 219: Cho lớp GIAOVIEN ... Thuoc được gọi là thuộc tính:",
+                options: [
+                "a. Định danh.",
+                "b. Khóa",
+                "c. Thuộc tính đa trị",
+                "d. Thuộc tính mỗi quan hệ"
+                ],
+                correctAnswer: 3
+                },
+                {
+                question: "Câu 221: (1 đáp án)\nCâu 220: Cho lớp GIAOVIEN ... Diachi được gọi là thuộc tính:",
+                options: [
+                "a. Định danh.",
+                "b. Phức hợp",
+                "c. Thuộc tính đa trị",
+                "d. Thuộc tính mỗi quan hệ"
+                ],
+                correctAnswer: 1
+                },
+                {
+                question: "Câu 222: (1 đáp án)\nCâu 221 Cho các lớp đối tượng như trên. Câu lệnh truy vấn sau: SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p.DiemTB > = 7 Làm nhiệm vụ:",
+                options: [
+                "a. Liệt kê tên những sin h viên đã tốt nghiệp có điểm trung bình >=7",
+                "b. Liệt kê tên những sinh viên đã tốt nghiệp",
+                "c. Liệt kê tên những sinh viên có trong bảng SV_Tốt nghiệp và có điểm trung bình >=7",
+                "d. Câu lệnh sai cú pháp"
+                ],
+                correctAnswer: 0
+                },
+                {
+                question: "Câu 223: (1 đáp án)\nCâu 222: Cho các lớp đối tượng như trên. Câu lệnh truy vấn sau: SELECT Name FROM p in SV_TOTNGHIEP WHERE p.DiemTB > = 7 Câu lệnh trên sai ở:",
+                options: [
+                "a. Không có lỗi sai",
+                "b. Sai ở Select Name",
+                "c. Sai ở p in SV_TOTNGHIÊP",
+                "d. Sai ở mệnh đề Where"
+                ],
+                correctAnswer: 1
+                },
+                {
+                    question: "Câu 224: Cho các lớp đối tượng như trên. Để hiển thị ra tên những sinh viên đã tốt nghiệp với điểm trung bình >=8 ta chọn câu lệnh nào?",
+                    options: [
+                      "a. SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p.DiemTB > = 7",
+                      "b. SELECT s.Name FROM p in SV_TOTNGHIEP WHERE p.DiemTB > = 7",
+                      "c. SELECT Name FROM p in SV_TOTNGHIEP WHERE DiemTB > = 7",
+                      "d. SELECT Name FROM SV_TOTNGHIEP WHERE p.DiemTB > = 7"
+                    ],
+                    correctAnswer: 0
+                  },
+                  {
+                    question: "Câu 225: Cho các lớp đối tượng như trên. Để hiển thị ra tên những sinh viên đã tốt nghiệp mà trưởng khoa quản lý sinh viên đó là Le An ta chọn câu lệnh:",
+                    options: [
+                      "a. SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p.Khoa.Truongkhoa.Hoten = ‘Le An’",
+                      "b. SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p.Khoa.Hoten =‘Le An’",
+                      "c. SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p.Khoa.Truongkhoa =‘Le An’",
+                      "d. SELECT p.Name FROM p in SV_TOTNGHIEP WHERE p. Truongkhoa.Hoten =‘Le An’"
+                    ],
+                    correctAnswer: 0
+                  },
+                  {
+                    question: "Câu 226: Cho các lớp đối tượng như trên. Để liệt kê ra tên những giáo viên có sở thích là Xem TV ta chọn câu lệnh:",
+                    options: [
+                      "a. SELECT p.Name FROM p in GIAOVIEN WHERE ‘xem TV’ in p.Sothich",
+                      "b. SELECT Name FROM p in GIAOVIEN WHERE ‘xem TV’ in p.Sothich",
+                      "c. SELECT p.Name FROM GIAOVIEN WHERE ‘xem TV’ in p.Sothich",
+                      "d. SELECT p.Name FROM p in GIAOVIEN WHERE Sothich= ‘xem TV’"
+                    ],
+                    correctAnswer: 0
+                  },
+                  {
+                    question: "Câu 227: Cho các lớp đối tượng như trên. Cho câu lệnh truy vấn liệt kê tất cả tên giáo viên có sở thich là xem tivi như sau:\nSELECT p.Name FROM p in GIAOVIEN\nWHERE ‘xem TV’ in p.Sothich\nHãy cho biết câu lệnh trên sai ở đâu?",
+                    options: [
+                      "a. Sai ở mệnh đề Where",
+                      "b. Sai ở mệnh đề From",
+                      "c. Sai ở mệnh đề Select",
+                      "d. Câu lệnh trên đúng"
+                    ],
+                    correctAnswer: 3
+                  },
+                  {
+                    question: "Câu 228: Cho các lớp đối tượng như trên. Cho câu lệnh truy vấn liệt kê tên của những sinh viên đã tốt nghiệp mà tuổi của sinh viên đó lơn hơn tuổi của giáo viên hướng dẫn:\nSELECT p.Name FROM p in SV_TOTNGHIEP, WHERE p.Tuoi > f.Tuoi\nHãy cho biết câu lệnh trên sai ở:",
+                    options: [
+                      "a. Sai ở mệnh đề Where",
+                      "b. Sai ở mệnh đề From",
+                      "c. Sai ở mệnh đề Select",
+                      "d. Câu lệnh trên đúng"
+                    ],
+                    correctAnswer: 1
+                  },
+                  {
+                    question: "Câu 229: Cho các lớp đối tượng như trên. Cho câu lệnh truy vấn liệt kê tên của những sinh viên đã tốt nghiệp mà tuổi của sinh viên đó lơn hơn tuổi của giáo viên hướng dẫn\nSELECT p.Name FROM p in SV_TOTNGHIEP, WHERE p.Tuoi > f.Tuoi\nCâu lệnh truy vấn sai tại mệnh đề From cần sửa là:",
+                    options: [
+                      "a. FROM p in SV_TOTNGHIEP, f in p.GVhuongdan",
+                      "b. FROM SV_TOTNGHIEP, GVhuongdan",
+                      "c. FROM p in SV_TOTNGHIEP, f in GVhuongdan",
+                      "d. FROM SV_TOTNGHIEP,"
+                    ],
+                    correctAnswer: 0
+                  },
+                  {
+                    question: "Câu 230: Cho các lớp đối tượng như trên. Cho câu lệnh truy vấn SELECT p.Name FROM p in SV_TOTNGHIEP, f in p.GVhuongdan WHERE p.Tuoi > f.Tuoi\nKết quả của câu lệnh truy vấn trên là:",
+                    options: [
+                      "a. Liệt kê tên những sinh viên đã tốt nghiệp mà có tuổi lớn hơn tuổi của giáo viên hướng dẫn",
+                      "b. Liệt kê những sinh viên đã tốt nghiệp mà có tuổi nhỏ hơn tuổi của giáo viên hướng dẫn",
+                      "c. Liệt kê tên của những giáo viên mà có tuổi nhỏ hơn tuổi của sinh viên mình hướng dẫn"
+                    ],
+                    correctAnswer: 0
+                  },
+                  {
+                    question: "Câu 231: (1 đáp án)\nCâu 230: Cho lược đồ ER như trên. Để chuyển đổi mối quan hệ phản xạ như trên ta sử dụng quy tắc chuyển đổi thứ:",
+                    options: [
+                    "a. 1",
+                    "b. 2",
+                    "c. 3",
+                    "d. 4"
+                    ],
+                    correctAnswer: 3,
+                    image: 'images/hinh21.png'
+                    }
+        
+
     ],
     // Các môn khác bắt đầu là mảng rỗng, bạn có thể bổ sung sau
     // pm1: [],
