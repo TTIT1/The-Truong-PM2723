@@ -30,6 +30,7 @@ let quizQuestions = [];
 let shuffled = false;
 let selectedSubjectKey = null;
 let canUseSearch = false;
+let selectedPart = null;
 
 function showSubjectSelection() {
     const listHtml = (window.subjects || []).map(s => `
@@ -50,13 +51,67 @@ function showSubjectSelection() {
     const confirmBtn = document.getElementById('confirm-subject-btn');
     confirmBtn.onclick = () => {
         selectedSubjectKey = selectEl.value;
+        showPartSelection();
+    };
+}
+
+function showPartSelection() {
+    const bank = (window.questionBank && selectedSubjectKey) ? (window.questionBank[selectedSubjectKey] || []) : [];
+    const totalQuestions = bank.length;
+    const partsCount = Math.ceil(totalQuestions / 50);
+    
+    let partsHtml = '';
+    for (let i = 0; i < partsCount; i++) {
+        const startQ = i * 50 + 1;
+        const endQ = Math.min((i + 1) * 50, totalQuestions);
+        partsHtml += `<option value="${i}">Phần ${i + 1}: Câu ${startQ} - ${endQ} (${endQ - startQ + 1} câu)</option>`;
+    }
+    
+    quizSection.innerHTML = `
+        <div class="quiz-container" style="max-width:600px;margin:auto;">
+            <h2>Chọn phần ôn tập</h2>
+            <p>Môn: ${(window.subjects || []).find(s => s.key === selectedSubjectKey)?.name || ''}</p>
+            <p>Tổng số câu hỏi: ${totalQuestions}</p>
+            <select id="part-select" style="width:100%;padding:10px;margin:10px 0;">
+                <option value="all">Tất cả câu hỏi (${totalQuestions} câu)</option>
+                ${partsHtml}
+            </select>
+            <div style="display:flex;gap:10px;justify-content:center;margin:20px 0;">
+                <button id="back-to-subject-btn">Chọn lại môn</button>
+                <button id="confirm-part-btn">Xác nhận</button>
+            </div>
+        </div>
+    `;
+    
+    const partSelectEl = document.getElementById('part-select');
+    const confirmPartBtn = document.getElementById('confirm-part-btn');
+    const backToSubjectBtn = document.getElementById('back-to-subject-btn');
+    
+    confirmPartBtn.onclick = () => {
+        selectedPart = partSelectEl.value;
         showReadyScreen();
+    };
+    
+    backToSubjectBtn.onclick = () => {
+        showSubjectSelection();
     };
 }
 
 function showReadyScreen() {
     const bank = (window.questionBank && selectedSubjectKey) ? (window.questionBank[selectedSubjectKey] || []) : [];
-    quizQuestions = bank.map(q => ({
+    
+    // Lọc câu hỏi theo phần được chọn
+    let filteredQuestions = [];
+    if (selectedPart === 'all' || selectedPart === null) {
+        filteredQuestions = bank;
+    } else {
+        const partIndex = parseInt(selectedPart);
+        const startIndex = partIndex * 50;
+        const endIndex = Math.min(startIndex + 50, bank.length);
+        filteredQuestions = bank.slice(startIndex, endIndex);
+    }
+    
+    quizQuestions = filteredQuestions.map(q => ({
         ...q,
         shuffledOptions: q.options.slice(),
         shuffledAnswer: q.correctAnswer
@@ -68,24 +123,40 @@ function showReadyScreen() {
                     <input id="search-input" type="text" placeholder="Tìm câu hỏi... gõ vài từ khóa" style="flex:1;padding:10px;">
                     <button id="clear-search-btn">Xóa</button>
                 </div>
-                <div id="search-info" style="font-size:12px;color:#666;margin-top:6px;">Gợi ý: Không phân biệt dấu, tìm theo nội dung câu hỏi hoặc gõ a/b/c/d để lọc theo đáp án đúng.</div>
+                <div id="search-info" style="font-size:12px;color:#666;margin-top:6px;">
+                    <strong>Tìm kiếm trong toàn bộ ${bank.length} câu hỏi của môn</strong><br>
+                    Gợi ý: Không phân biệt dấu, tìm theo nội dung câu hỏi hoặc gõ a/b/c/d để lọc theo đáp án đúng.
+                </div>
                 <div id="search-results" style="margin-top:10px;max-height:280px;overflow:auto;"></div>
             </div>
         ` : '';
 
+    const partInfo = selectedPart === 'all' || selectedPart === null ? 
+        'Tất cả câu hỏi' : 
+        `Phần ${parseInt(selectedPart) + 1}`;
+    
     quizSection.innerHTML = `
         <div class="quiz-container" style="max-width:600px;margin:auto;">
             <h2>Chuẩn bị làm bài</h2>
             <p>Môn: ${(window.subjects || []).find(s => s.key === selectedSubjectKey)?.name || ''}</p>
+            <p>Phần: ${partInfo} (${quizQuestions.length} câu hỏi)</p>
             <p>Bạn có thể đảo cả thứ tự câu hỏi và đáp án trước khi bắt đầu.</p>
             ${searchHtml}
             <div style="display:flex;gap:10px;justify-content:center;margin:20px 0;">
+                <button id="back-to-part-btn">Chọn lại phần</button>
                 <button id="shuffle-all-btn">Đảo câu hỏi & đáp án</button>
                 <button id="start-quiz-btn" ${quizQuestions.length === 0 ? 'disabled' : ''}>Bắt đầu</button>
             </div>
-            ${quizQuestions.length === 0 ? '<p style="color:#c00;">Chưa có câu hỏi cho môn này.</p>' : ''}
+            ${quizQuestions.length === 0 ? '<p style="color:#c00;">Chưa có câu hỏi cho phần này.</p>' : ''}
         </div>
     `;
+    const backToPartBtn = document.getElementById('back-to-part-btn');
+    if (backToPartBtn) {
+        backToPartBtn.onclick = () => {
+            showPartSelection();
+        };
+    }
+    
     document.getElementById('shuffle-all-btn').onclick = () => {
         shuffle(quizQuestions);
         quizQuestions.forEach(q => {
@@ -109,6 +180,13 @@ function showReadyScreen() {
     const searchInput = document.getElementById('search-input');
     const clearSearchBtn = document.getElementById('clear-search-btn');
     const searchResults = document.getElementById('search-results');
+    
+    // Sử dụng toàn bộ câu hỏi của môn để tìm kiếm, không giới hạn theo phần
+    const allQuestionsForSearch = bank.map(q => ({
+        ...q,
+        shuffledOptions: q.options.slice(),
+        shuffledAnswer: q.correctAnswer
+    }));
 
     function normalizeText(text) {
         return (text || '')
@@ -126,20 +204,48 @@ function renderSearchResults(matches) {
         const html = matches.map(({ q, index }) => {
             const correctIdx = q.shuffledAnswer;
             const correctText = q.shuffledOptions[correctIdx];
+            const partNumber = Math.floor(index / 50) + 1;
+            const isInCurrentPart = selectedPart === 'all' || selectedPart === null || 
+                                   (index >= parseInt(selectedPart) * 50 && index < parseInt(selectedPart) * 50 + 50);
+            
             return `
                 <div class="search-item" style="padding:10px;border:1px solid #eee;border-radius:6px;margin-bottom:8px;">
-                    <div style="font-weight:600;margin-bottom:6px;">Câu ${index + 1}: ${q.question}</div>
+                    <div style="font-weight:600;margin-bottom:6px;">
+                        Câu ${index + 1} (Phần ${partNumber}): ${q.question}
+                        ${!isInCurrentPart ? '<span style="color:#ff6b35;font-size:12px;"> - Ngoài phần hiện tại</span>' : ''}
+                    </div>
                     ${q.image ? `<div class="question-image"><img src="${q.image}" alt="Hình" style="max-width:100%;margin:6px 0;"></div>` : ''}
                     <div style="font-size:14px;margin-bottom:6px;">Đáp án đúng: <span style="color:#0a7a0a;font-weight:600;">${correctText}</span></div>
-                    <button class=\"goto-question\" data-index=\"${index}\" style=\"font-size:13px;\">Đi tới câu này</button>
+                    <button class=\"goto-question\" data-index=\"${index}\" style=\"font-size:13px;\">
+                        ${isInCurrentPart ? 'Đi tới câu này' : 'Chuyển sang phần này'}
+                    </button>
                 </div>
             `;
         }).join('');
     searchResults.innerHTML = html;
     searchResults.querySelectorAll('.goto-question').forEach(btn => {
         btn.addEventListener('click', () => {
-            const idx = parseInt(btn.getAttribute('data-index')) || 0;
-            renderQuiz(quizQuestions, false, idx);
+            const globalIdx = parseInt(btn.getAttribute('data-index')) || 0;
+            
+            // Kiểm tra xem câu hỏi có nằm trong phần hiện tại không
+            const currentPartStart = selectedPart === 'all' || selectedPart === null ? 0 : parseInt(selectedPart) * 50;
+            const currentPartEnd = selectedPart === 'all' || selectedPart === null ? bank.length : Math.min(currentPartStart + 50, bank.length);
+            
+            if (globalIdx >= currentPartStart && globalIdx < currentPartEnd) {
+                // Câu hỏi nằm trong phần hiện tại, chuyển đến câu đó
+                const localIdx = globalIdx - currentPartStart;
+                renderQuiz(quizQuestions, false, localIdx);
+            } else {
+                // Câu hỏi không nằm trong phần hiện tại, hỏi người dùng có muốn chuyển phần không
+                const targetPart = Math.floor(globalIdx / 50);
+                const targetPartStart = targetPart * 50 + 1;
+                const targetPartEnd = Math.min(targetPartStart + 49, bank.length);
+                
+                if (confirm(`Câu hỏi này nằm ở Phần ${targetPart + 1} (Câu ${targetPartStart}-${targetPartEnd}). Bạn có muốn chuyển sang phần đó không?`)) {
+                    selectedPart = targetPart.toString();
+                    showReadyScreen();
+                }
+            }
         });
     });
     }
@@ -158,7 +264,7 @@ function doSearch() {
         const map = { a: 0, b: 1, c: 2, d: 3 };
         answerLetterIdx = map[ch];
     }
-    const results = quizQuestions
+    const results = allQuestionsForSearch
         .map((q, idx) => ({ q, idx }))
         .filter(({ q }) => {
             const qText = normalizeText(q.question);
@@ -295,10 +401,29 @@ function renderQuiz(quizQuestions, onlyWrong = false, startIndex = 0) {
                 <h2>Kết quả</h2>
                 <p>Bạn đúng ${correct} / ${quizQuestions.length} câu.</p>
                 ${wrong.length ? `<p>Câu sai: ${wrong.map(i=>i+1).join(', ')}</p>` : '<p>Xuất sắc! Bạn làm đúng hết!</p>'}
-                <button onclick="location.reload()">Làm lại tất cả</button>
-                ${wrong.length ? '<button id="retakeWrongBtn">Làm lại câu sai</button>' : ''}
+                <div style="display:flex;gap:10px;justify-content:center;margin:20px 0;flex-wrap:wrap;">
+                    <button id="backToPartBtn">Chọn lại phần</button>
+                    <button id="retakeCurrentBtn">Làm lại phần này</button>
+                    ${wrong.length ? '<button id="retakeWrongBtn">Làm lại câu sai</button>' : ''}
+                    <button onclick="location.reload()">Thoát về đầu</button>
+                </div>
             </div>
         `;
+        // Xử lý các nút bấm
+        const backToPartBtn = document.getElementById('backToPartBtn');
+        if (backToPartBtn) {
+            backToPartBtn.onclick = () => {
+                showPartSelection();
+            };
+        }
+        
+        const retakeCurrentBtn = document.getElementById('retakeCurrentBtn');
+        if (retakeCurrentBtn) {
+            retakeCurrentBtn.onclick = () => {
+                showReadyScreen();
+            };
+        }
+        
         if (wrong.length) {
             document.getElementById('retakeWrongBtn').onclick = () => {
                 // Chỉ lấy lại các câu sai
