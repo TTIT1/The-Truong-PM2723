@@ -1,6 +1,6 @@
 // Xử lý đăng nhập
-const PASSWORD = 'VIP2025';
-const SEARCH_PASSWORD = 'PM27.23';
+const PASSWORD = 'NHOM1';
+const SEARCH_PASSWORD = 'NHOM1VS5';
 const loginSection = document.getElementById('login-section');
 const quizSection = document.getElementById('quiz-section');
 const loginBtn = document.getElementById('login-btn');
